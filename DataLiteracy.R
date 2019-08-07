@@ -27,6 +27,15 @@ xtmp <- 3.0 * rnorm( 1000)
 MAPE <- abs( xtmp / ( 1.0 + xtmp ) )
 
 
+#### Random scatter example with structure
+x.seq <- seq( 0, 5, 0.01 )
+y.systematic <- 1 - 2*((x.seq - 2.5)**2)
+plot( x=x.seq, y.systematic + (3.0*rnorm( n=length(y.systematic) )), 
+      xlab = "x", ylab="y" )
+lines( x=x.seq, y=y.systematic, col="red", lwd=2 )
+
+
+
 #### Sample mean example
 
 ## Define properties of the sample of data
